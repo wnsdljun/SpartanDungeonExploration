@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -92,7 +93,25 @@ public class PlayerController : MonoBehaviour
 
     #endregion
 
+    #region 인벤토리 관련
+    public Action playerInventory;
 
+    public void OnInventoryInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            playerInventory?.Invoke();
+            ToggleCursor();
+        }
+    }
+
+    private void ToggleCursor()
+    {
+        bool toggle = Cursor.lockState == CursorLockMode.Locked;
+        Cursor.lockState = toggle ? CursorLockMode.None : CursorLockMode.Locked;
+        canLook = !toggle;
+    }
+    #endregion
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();

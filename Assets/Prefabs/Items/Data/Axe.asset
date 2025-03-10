@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3280d31174ca71b4ba0a56dd7996fb1f, type: 3}
   m_Name: Axe
   m_EditorClassIdentifier: 
-  displayName: 
-  description: 
+  displayName: "\uB3C4\uB07C"
+  description: "\uB098\uBB34\uB97C \uCC44\uC9D1\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
   type: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 06e8d836c76eb494db7ab3784ffcb0eb, type: 3}
   dropPrefab: {fileID: 0}
   isStackable: 0
   maxStackCount: 0

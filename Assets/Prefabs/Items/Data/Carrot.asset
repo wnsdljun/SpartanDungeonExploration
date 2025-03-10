@@ -12,12 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3280d31174ca71b4ba0a56dd7996fb1f, type: 3}
   m_Name: Carrot
   m_EditorClassIdentifier: 
-  displayName: 
-  description: 
-  type: 0
-  icon: {fileID: 0}
+  displayName: "\uB2F9\uADFC"
+  description: "\uD5C8\uAE30\uB97C \uCC44\uC6B8 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+  type: 1
+  icon: {fileID: 21300000, guid: b53822ec75d701e49b9947d1d09fd81e, type: 3}
   dropPrefab: {fileID: 0}
-  isStackable: 0
-  maxStackCount: 0
-  consumables: []
-  boosts: []
+  isStackable: 1
+  maxStackCount: 12
+  consumables:
+  - type: 0
+    value: 25
+  boosts:
+  - type: 0
+    duration: 0
+    interval: 0
