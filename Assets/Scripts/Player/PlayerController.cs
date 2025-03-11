@@ -9,11 +9,14 @@ public class PlayerController : MonoBehaviour
 
     #region 이동/점프 관련
     [Header("Movement")]
-    public float moveSpeed;
+    private float moveSpeed;
+    public float walkSpeed;
+    public float sprintSpeed;
     public float jumpPower;
     public LayerMask groundLayerMask;
 
     private Vector2 movementInput;
+    private bool sprint;
 
 
     public void OnMoveInput(InputAction.CallbackContext context)
@@ -35,6 +38,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void OnSprintInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            //달리기
+            sprint = true;
+        }
+        if (context.canceled)
+        {
+            //원래 속도로 돌아오기
+            sprint = false;
+        }
+    }
     private bool IsGrounded()
     {
         Ray[] rays = new Ray[4]
@@ -53,6 +69,16 @@ public class PlayerController : MonoBehaviour
     }
     private void Move()
     {
+        //달릴까 말까
+        if (sprint && CharacterManager.Instance.Player.conditions.CanSprint())
+        {
+            moveSpeed = sprintSpeed;
+        }
+        else
+        {
+            moveSpeed = walkSpeed;
+        }
+
         Vector3 dir = transform.forward * movementInput.y + transform.right * movementInput.x;
         dir.Normalize();
         dir *= moveSpeed;
@@ -120,6 +146,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        moveSpeed = walkSpeed;
     }
 
     private void FixedUpdate()
