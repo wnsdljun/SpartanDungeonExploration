@@ -4,7 +4,8 @@ using UnityEngine;
 public enum ItemType
 {
     Equippable,
-    Consumable
+    Consumable,
+    Resource
 }
 
 public enum ConsumableType

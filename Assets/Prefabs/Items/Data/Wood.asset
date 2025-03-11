@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3280d31174ca71b4ba0a56dd7996fb1f, type: 3}
   m_Name: Wood
   m_EditorClassIdentifier: 
-  displayName: 
-  description: 
-  type: 0
-  icon: {fileID: 0}
-  dropPrefab: {fileID: 0}
-  isStackable: 0
-  maxStackCount: 0
+  displayName: "\uB098\uBB34"
+  description: "\uD1B5\uB098\uBB34"
+  type: 2
+  icon: {fileID: 21300000, guid: a5612e17f7779374da8564e7a11d823c, type: 3}
+  dropPrefab: {fileID: 8870128950660934117, guid: 01975ca1010023f4391b6140baafeb73, type: 3}
+  isStackable: 1
+  maxStackCount: 12
   consumables: []
   boosts: []

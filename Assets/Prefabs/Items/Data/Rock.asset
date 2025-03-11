@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3280d31174ca71b4ba0a56dd7996fb1f, type: 3}
   m_Name: Rock
   m_EditorClassIdentifier: 
-  displayName: 
+  displayName: "\uB3CC"
   description: 
-  type: 0
-  icon: {fileID: 0}
-  dropPrefab: {fileID: 0}
-  isStackable: 0
-  maxStackCount: 0
+  type: 2
+  icon: {fileID: 21300000, guid: e61976ceaf6919c47853f5a7ea09288b, type: 3}
+  dropPrefab: {fileID: 323331449575250863, guid: 7ab333d225148fe439b89800aaf8b352, type: 3}
+  isStackable: 1
+  maxStackCount: 12
   consumables: []
   boosts: []
